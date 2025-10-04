@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Interview Performance Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="dashboard-header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Student Interview Performance Dashboard</h1>
+                <div class="last-updated">
+                    Last updated: <span id="lastUpdated"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Cards Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-content">
+                        <div class="stat-value" id="totalStudents">10</div>
+                        <div class="stat-label">Total Students</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⏳</div>
+                    <div class="stat-content">
+                        <div class="stat-value" id="activeInterviews">3</div>
+                        <div class="stat-label">Active Interviews</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-content">
+                        <div class="stat-value" id="averageScore">85.2</div>
+                        <div class="stat-label">Average Score</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-content">
+                        <div class="stat-value" id="passRate">85%</div>
+                        <div class="stat-label">Pass Rate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Section A - Overall Performance Overview -->
+            <section class="dashboard-section">
+                <h2>Overall Performance Overview</h2>
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <h3>Performance Radar</h3>
+                        <div style="position: relative; height: 300px;">
+                            <canvas id="radarChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Score Comparison</h3>
+                        <div style="position: relative; height: 300px;">
+                            <canvas id="barChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-container chart-wide">
+                        <h3>Performance Trend</h3>
+                        <div style="position: relative; height: 300px;">
+                            <canvas id="lineChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section B - Individual Student Performance -->
+            <section class="dashboard-section">
+                <div class="section-header">
+                    <h2>Individual Student Performance</h2>
+                    <div class="controls">
+                        <div class="search-container">
+                            <input type="text" id="searchInput" class="form-control search-input" placeholder="Search students...">
+                        </div>
+                        <div class="filter-buttons">
+                            <button class="btn btn--secondary filter-btn active" data-filter="all">All Students</button>
+                            <button class="btn btn--secondary filter-btn" data-filter="in-progress">Active Only</button>
+                            <button class="btn btn--secondary filter-btn" data-filter="completed">Completed Only</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table class="students-table">
+                        <thead>
+                            <tr>
+                                <th class="sortable" data-sort="name">Name</th>
+                                <th class="sortable" data-sort="status">Status</th>
+                                <th class="sortable" data-sort="coding">Coding</th>
+                                <th class="sortable" data-sort="concepts">Concepts</th>
+                                <th class="sortable" data-sort="confidence">Confidence</th>
+                                <th class="sortable" data-sort="communication">Communication</th>
+                                <th class="sortable" data-sort="overall">Overall</th>
+                                <th class="sortable" data-sort="interviewDate">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentsTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Section C - Detailed Analytics -->
+            <section class="dashboard-section">
+                <h2>Detailed Analytics</h2>
+                <div class="analytics-grid">
+                    <div class="chart-container">
+                        <h3>Score Distribution</h3>
+                        <div style="position: relative; height: 300px;">
+                            <canvas id="stackedBarChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Status Distribution</h3>
+                        <div style="position: relative; height: 300px;">
+                            <canvas id="pieChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Skills Correlation</h3>
+                        <div style="position: relative; height: 300px;">
+                            <canvas id="scatterChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Student Detail Modal -->
+    <div id="studentModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalStudentName">Student Details</h3>
+                <button class="modal-close" onclick="closeStudentModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="student-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Status:</span>
+                        <span id="modalStatus" class="status"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Interview Date:</span>
+                        <span id="modalDate"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Interviewer:</span>
+                        <span id="modalInterviewer"></span>
+                    </div>
+                </div>
+                <div class="scores-breakdown">
+                    <h4>Performance Breakdown</h4>
+                    <div class="score-bars">
+                        <div class="score-bar">
+                            <label>Coding</label>
+                            <div class="bar-container">
+                                <div class="bar-fill" id="modalCodingBar"></div>
+                                <span id="modalCoding" class="score-value">0</span>
+                            </div>
+                        </div>
+                        <div class="score-bar">
+                            <label>Concepts</label>
+                            <div class="bar-container">
+                                <div class="bar-fill" id="modalConceptsBar"></div>
+                                <span id="modalConcepts" class="score-value">0</span>
+                            </div>
+                        </div>
+                        <div class="score-bar">
+                            <label>Confidence</label>
+                            <div class="bar-container">
+                                <div class="bar-fill" id="modalConfidenceBar"></div>
+                                <span id="modalConfidence" class="score-value">0</span>
+                            </div>
+                        </div>
+                        <div class="score-bar">
+                            <label>Communication</label>
+                            <div class="bar-container">
+                                <div class="bar-fill" id="modalCommunicationBar"></div>
+                                <span id="modalCommunication" class="score-value">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

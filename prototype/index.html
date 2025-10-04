@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Mock Interviews - Master Your Interviews with AI-Powered Practice</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <h2>🤖 AI Mock Interviews</h2>
+            </div>
+            <ul class="nav__menu" id="navMenu">
+                <li><a href="#" data-page="home" class="nav__link active">Home</a></li>
+                <li><a href="#" data-page="features" class="nav__link">Features</a></li>
+                <li><a href="dashboard.html" data-page="Dashboard" class="nav__link">Dashboard</a></li>
+                <li><a href="#" data-page="pricing" class="nav__link">Pricing</a></li>
+                <li><a href="#" data-page="about" class="nav__link">About</a></li>
+                <li><a href="#" data-page="contact" class="nav__link">Contact</a></li>
+            </ul>
+            <div class="nav__auth">
+                <button class="btn btn--outline btn--sm" data-page="login">Login</button>
+                <button class="btn btn--primary btn--sm" data-page="signup">Sign Up</button>
+            </div>
+            <button class="nav__toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Homepage -->
+        <section id="home" class="page active">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="container">
+                    <div class="hero__content">
+                        <h1 class="hero__title">Master Your Interviews with AI-Powered Practice</h1>
+                        <p class="hero__subtitle">Build confidence, improve your skills, and land your dream job with personalized AI feedback and realistic interview simulations.</p>
+                        <div class="hero__actions">
+                            <button class="btn btn--primary btn--lg" data-page="signup">Start Free Practice</button>
+                            <button class="btn btn--outline btn--lg">View Demo</button>
+                        </div>
+                    </div>
+                    <div class="hero__visual">
+                        <div class="hero__mockup">
+                            <div class="mockup__screen">
+                                <div class="mockup__header">
+                                    <div class="mockup__dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="mockup__content">
+                                    <div class="mockup__video">
+                                        <div class="video__placeholder">📹</div>
+                                        <div class="video__controls">
+                                            <span class="video__score">AI Score: 87%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features">
+                <div class="container">
+                    <div class="section__header">
+                        <h2>Powerful Features for Interview Success</h2>
+                        <p>Everything you need to ace your next interview</p>
+                    </div>
+                    <div class="features__grid">
+                        <div class="feature__card">
+                            <div class="feature__icon">🤖</div>
+                            <h3>AI-Powered Feedback</h3>
+                            <p>Get instant, detailed analysis of your responses, body language, and speech patterns</p>
+                        </div>
+                        <div class="feature__card">
+                            <div class="feature__icon">🎯</div>
+                            <h3>Industry-Specific Questions</h3>
+                            <p>Practice with questions tailored to your field - tech, finance, healthcare, and more</p>
+                        </div>
+                        <div class="feature__card">
+                            <div class="feature__icon">📹</div>
+                            <h3>Video & Audio Practice</h3>
+                            <p>Simulate real interview conditions with video recording and playback</p>
+                        </div>
+                        <div class="feature__card">
+                            <div class="feature__icon">📊</div>
+                            <h3>Progress Tracking</h3>
+                            <p>Monitor your improvement with detailed analytics and performance metrics</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Statistics Section -->
+            <section class="statistics">
+                <div class="container">
+                    <div class="stats__grid">
+                        <div class="stat__item">
+                            <h3>50,000+</h3>
+                            <p>Users Helped</p>
+                        </div>
+                        <div class="stat__item">
+                            <h3>125,000+</h3>
+                            <p>Interviews Aced</p>
+                        </div>
+                        <div class="stat__item">
+                            <h3>87%</h3>
+                            <p>Success Rate</p>
+                        </div>
+                        <div class="stat__item">
+                            <h3>67%</h3>
+                            <p>Avg Improvement</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How It Works Section -->
+            <section class="how-it-works">
+                <div class="container">
+                    <div class="section__header">
+                        <h2>How It Works</h2>
+                        <p>Three simple steps to interview success</p>
+                    </div>
+                    <div class="steps__grid">
+                        <div class="step__item">
+                            <div class="step__number">1</div>
+                            <h3>Practice</h3>
+                            <p>Choose your interview type and start practicing with AI-generated questions</p>
+                        </div>
+                        <div class="step__item">
+                            <div class="step__number">2</div>
+                            <h3>Get Feedback</h3>
+                            <p>Receive instant, detailed feedback on your responses and performance</p>
+                        </div>
+                        <div class="step__item">
+                            <div class="step__number">3</div>
+                            <h3>Improve</h3>
+                            <p>Track your progress and continue practicing until you're confident</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="testimonials">
+                <div class="container">
+                    <div class="section__header">
+                        <h2>Success Stories</h2>
+                        <p>Hear from users who landed their dream jobs</p>
+                    </div>
+                    <div class="testimonials__grid">
+                        <div class="testimonial__card">
+                            <div class="testimonial__rating">
+                                <span>⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <p>"This platform helped me practice behavioral questions and gave me the confidence I needed. Got my dream job after 2 weeks of practice!"</p>
+                            <div class="testimonial__author">
+                                <h4>Sarah Chen</h4>
+                                <span>Software Engineer at Google</span>
+                            </div>
+                        </div>
+                        <div class="testimonial__card">
+                            <div class="testimonial__rating">
+                                <span>⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <p>"The AI feedback was incredibly detailed. It helped me identify nervous habits I didn't even know I had."</p>
+                            <div class="testimonial__author">
+                                <h4>Marcus Johnson</h4>
+                                <span>Product Manager at Microsoft</span>
+                            </div>
+                        </div>
+                        <div class="testimonial__card">
+                            <div class="testimonial__rating">
+                                <span>⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <p>"Industry-specific questions were spot-on. Felt like I was in a real interview."</p>
+                            <div class="testimonial__author">
+                                <h4>Priya Patel</h4>
+                                <span>Data Scientist at Amazon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Login Page -->
+        <section id="login" class="page">
+            <div class="auth__container">
+                <div class="auth__card">
+                    <div class="auth__header">
+                        <h2>Welcome Back</h2>
+                        <p>Sign in to continue your interview practice</p>
+                    </div>
+                    <form class="auth__form" id="loginForm">
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="form-group flex justify-between items-center">
+                            <label class="checkbox__label">
+                                <input type="checkbox"> Remember me
+                            </label>
+                            <a href="#" class="forgot__link">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width">Sign In</button>
+                    </form>
+                    <div class="auth__divider">
+                        <span>Or continue with</span>
+                    </div>
+                    <div class="social__login">
+                        <button class="btn btn--outline btn--full-width">
+                            <span>Continue with Google</span>
+                        </button>
+                        <button class="btn btn--outline btn--full-width">
+                            <span>Continue with LinkedIn</span>
+                        </button>
+                    </div>
+                    <p class="auth__switch">
+                        Don't have an account? <a href="#" data-page="signup">Sign up</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sign Up Page -->
+        <section id="signup" class="page">
+            <div class="auth__container">
+                <div class="auth__card">
+                    <div class="auth__header">
+                        <h2>Create Account</h2>
+                        <p>Start your journey to interview success</p>
+                    </div>
+                    <form class="auth__form" id="signupForm">
+                        <div class="form-group">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox__label">
+                                <input type="checkbox" required> I agree to the Terms of Service and Privacy Policy
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width">Create Account</button>
+                    </form>
+                    <div class="auth__divider">
+                        <span>Or continue with</span>
+                    </div>
+                    <div class="social__login">
+                        <button class="btn btn--outline btn--full-width">
+                            <span>Continue with Google</span>
+                        </button>
+                        <button class="btn btn--outline btn--full-width">
+                            <span>Continue with LinkedIn</span>
+                        </button>
+                    </div>
+                    <p class="auth__switch">
+                        Already have an account? <a href="#" data-page="login">Sign in</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact" class="page">
+            <div class="contact__container container">
+                <div class="section__header">
+                    <h2>Get in Touch</h2>
+                    <p>Have questions? We're here to help you succeed</p>
+                </div>
+                <div class="contact__content">
+                    <div class="contact__info">
+                        <h3>Contact Information</h3>
+                        <div class="contact__item">
+                            <div class="contact__icon">📍</div>
+                            <div>
+                                <h4>Address</h4>
+                                <p>123 Innovation Drive, Tech District, San Francisco, CA 94105</p>
+                            </div>
+                        </div>
+                        <div class="contact__item">
+                            <div class="contact__icon">📞</div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact__item">
+                            <div class="contact__icon">✉️</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>hello@aimockinterviews.com</p>
+                            </div>
+                        </div>
+                        <div class="social__links">
+                            <h4>Follow Us</h4>
+                            <div class="social__icons">
+                                <a href="https://linkedin.com/company/aimockinterviews" target="_blank">LinkedIn</a>
+                                <a href="https://twitter.com/aimockinterviews" target="_blank">Twitter</a>
+                                <a href="https://facebook.com/aimockinterviews" target="_blank">Facebook</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact__form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Phone</label>
+                                <input type="tel" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Subject</label>
+                                <select class="form-control">
+                                    <option>General Inquiry</option>
+                                    <option>Technical Support</option>
+                                    <option>Billing Question</option>
+                                    <option>Feature Request</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-control" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Page -->
+        <section id="dashboard" class="page">
+            <div class="dashboard__container container">
+                <div class="dashboard__header">
+                    <h2>Welcome back, John!</h2>
+                    <p>Ready to continue your interview practice?</p>
+                </div>
+                <div class="dashboard__content">
+                    <div class="dashboard__sidebar">
+                        <div class="quick__actions">
+                            <h3>Quick Actions</h3>
+                            <button class="btn btn--primary btn--full-width mb-8">Start New Practice</button>
+                            <button class="btn btn--outline btn--full-width mb-8">Review Feedback</button>
+                            <button class="btn btn--outline btn--full-width">View Analytics</button>
+                        </div>
+                        <div class="progress__overview">
+                            <h3>Your Progress</h3>
+                            <div class="progress__item">
+                                <span>Confidence Score</span>
+                                <div class="progress__bar">
+                                    <div class="progress__fill" style="width: 78%"></div>
+                                </div>
+                                <span>78%</span>
+                            </div>
+                            <div class="progress__item">
+                                <span>Communication</span>
+                                <div class="progress__bar">
+                                    <div class="progress__fill" style="width: 85%"></div>
+                                </div>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress__item">
+                                <span>Technical Skills</span>
+                                <div class="progress__bar">
+                                    <div class="progress__fill" style="width: 72%"></div>
+                                </div>
+                                <span>72%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard__main">
+                        <div class="performance__metrics">
+                            <h3>Performance Metrics</h3>
+                            <div class="metrics__grid">
+                                <div class="metric__card">
+                                    <h4>Total Sessions</h4>
+                                    <span class="metric__value">24</span>
+                                </div>
+                                <div class="metric__card">
+                                    <h4>Hours Practiced</h4>
+                                    <span class="metric__value">18.5</span>
+                                </div>
+                                <div class="metric__card">
+                                    <h4>Improvement</h4>
+                                    <span class="metric__value">+23%</span>
+                                </div>
+                                <div class="metric__card">
+                                    <h4>Streak</h4>
+                                    <span class="metric__value">7 days</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart__container">
+                            <h3>Progress Chart</h3>
+                            <div style="position: relative; height: 300px;">
+                                <canvas id="progressChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="recent__sessions">
+                            <h3>Recent Sessions</h3>
+                            <div class="sessions__list">
+                                <div class="session__item">
+                                    <div class="session__info">
+                                        <h4>Technical Interview - Software Engineering</h4>
+                                        <p>Aug 30, 2025 • 45 minutes</p>
+                                    </div>
+                                    <div class="session__score">
+                                        <span class="status status--success">87%</span>
+                                    </div>
+                                </div>
+                                <div class="session__item">
+                                    <div class="session__info">
+                                        <h4>Behavioral Interview - Leadership</h4>
+                                        <p>Aug 28, 2025 • 30 minutes</p>
+                                    </div>
+                                    <div class="session__score">
+                                        <span class="status status--info">82%</span>
+                                    </div>
+                                </div>
+                                <div class="session__item">
+                                    <div class="session__info">
+                                        <h4>System Design Interview</h4>
+                                        <p>Aug 26, 2025 • 60 minutes</p>
+                                    </div>
+                                    <div class="session__score">
+                                        <span class="status status--warning">75%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h3>🤖 AI Mock Interviews</h3>
+                    <p>Master your interviews with AI-powered practice</p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Demo</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#" data-page="contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 AI Mock Interviews. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

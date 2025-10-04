@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <h2>🤖 AI Mock Interviews</h2>
+            </div>
+            <ul class="nav__menu" id="navMenu">
+                <li><a href="#" data-page="home" class="nav__link active">Home</a></li>
+                <li><a href="#" data-page="features" class="nav__link">Features</a></li>
+                <li><a href="" data-page="Dashboard" class="nav__link">Dashboard</a></li>
+                <li><a href="#" data-page="pricing" class="nav__link">Pricing</a></li>
+                <li><a href="#" data-page="about" class="nav__link">About</a></li>
+                <li><a href="#" data-page="contact" class="nav__link">Contact</a></li>
+            </ul>
+            <div class="nav__auth">
+                <button class="btn btn--outline btn--sm" data-page="login">Login</button>
+                <button class="btn btn--primary btn--sm" data-page="signup">Sign Up</button>
+            </div>
+            <button class="nav__toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+    <section id="dashboard" class="page">
+            <div class="dashboard__container container">
+                <div class="dashboard__header">
+                    <h2>Welcome back, John!</h2>
+                    <p>Ready to continue your interview practice?</p>
+                </div>
+                <div class="dashboard__content">
+                    <div class="dashboard__sidebar">
+                        <div class="quick__actions">
+                            <h3>Quick Actions</h3>
+                            <button class="btn btn--primary btn--full-width mb-8">Start New Practice</button>
+                            <button class="btn btn--outline btn--full-width mb-8">Review Feedback</button>
+                            <button class="btn btn--outline btn--full-width">View Analytics</button>
+                        </div>
+                        <div class="progress__overview">
+                            <h3>Your Progress</h3>
+                            <div class="progress__item">
+                                <span>Confidence Score</span>
+                                <div class="progress__bar">
+                                    <div class="progress__fill" style="width: 78%"></div>
+                                </div>
+                                <span>78%</span>
+                            </div>
+                            <div class="progress__item">
+                                <span>Communication</span>
+                                <div class="progress__bar">
+                                    <div class="progress__fill" style="width: 85%"></div>
+                                </div>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress__item">
+                                <span>Technical Skills</span>
+                                <div class="progress__bar">
+                                    <div class="progress__fill" style="width: 72%"></div>
+                                </div>
+                                <span>72%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard__main">
+                        <div class="performance__metrics">
+                            <h3>Performance Metrics</h3>
+                            <div class="metrics__grid">
+                                <div class="metric__card">
+                                    <h4>Total Sessions</h4>
+                                    <span class="metric__value">24</span>
+                                </div>
+                                <div class="metric__card">
+                                    <h4>Hours Practiced</h4>
+                                    <span class="metric__value">18.5</span>
+                                </div>
+                                <div class="metric__card">
+                                    <h4>Improvement</h4>
+                                    <span class="metric__value">+23%</span>
+                                </div>
+                                <div class="metric__card">
+                                    <h4>Streak</h4>
+                                    <span class="metric__value">7 days</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart__container">
+                            <h3>Progress Chart</h3>
+                            <div style="position: relative; height: 300px;">
+                                <canvas id="progressChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="recent__sessions">
+                            <h3>Recent Sessions</h3>
+                            <div class="sessions__list">
+                                <div class="session__item">
+                                    <div class="session__info">
+                                        <h4>Technical Interview - Software Engineering</h4>
+                                        <p>Aug 30, 2025 • 45 minutes</p>
+                                    </div>
+                                    <div class="session__score">
+                                        <span class="status status--success">87%</span>
+                                    </div>
+                                </div>
+                                <div class="session__item">
+                                    <div class="session__info">
+                                        <h4>Behavioral Interview - Leadership</h4>
+                                        <p>Aug 28, 2025 • 30 minutes</p>
+                                    </div>
+                                    <div class="session__score">
+                                        <span class="status status--info">82%</span>
+                                    </div>
+                                </div>
+                                <div class="session__item">
+                                    <div class="session__info">
+                                        <h4>System Design Interview</h4>
+                                        <p>Aug 26, 2025 • 60 minutes</p>
+                                    </div>
+                                    <div class="session__score">
+                                        <span class="status status--warning">75%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+</body>
+</html>
